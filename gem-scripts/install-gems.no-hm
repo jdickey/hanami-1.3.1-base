@@ -4,4 +4,4 @@
 # Dockerfile being built. Any other lines *should* be ignored; however, please
 # don't add other commands you expect to have executed by said Dockerfile here.
 
-gem install --no-document hanami:1.3.1 hanami-webconsole dotenv
+gem install --no-document hanami hanami-webconsole dotenv

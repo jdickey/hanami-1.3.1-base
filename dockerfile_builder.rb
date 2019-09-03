@@ -24,8 +24,8 @@ class DockerfileBuilder
     attr_reader :config
 
     POSSIBLES = [
-      'including hanami-model ',
-      'NOT including hanami-model '].freeze
+      ' including hanami-model',
+      ' NOT including hanami-model'].freeze
     private_constant :POSSIBLES
 
     def ending_string
@@ -116,13 +116,24 @@ class DockerfileBuilder
 
     attr_reader :config
 
+    def build_run_params(lines, config)
+      ret = lines.select { |line| line.match(/gem install /) }
+        .map(&:rstrip).join(' && ')
+      ret.sub!('hanami ', "hanami:#{config.hanami_version} ")
+      ret.sub!('hanami-model ', new_hmv(config)) if config.hanami_model_version
+      ret
+    end
+
+    def new_hmv(config)
+      "hanami-model:#{config.hanami_model_version} "
+    end
+
     def copy_gems
       hm = config.hm? ? "hm" : "no-hm"
       filename = [GEM_BUILDER_PREFIX, hm].join('.')
-      commands = File.read(filename).lines
-        .select { |line| line.match(/gem install /) }
-        .map(&:rstrip).join(' && ')
-      "RUN #{commands}"
+      new_hmv = "hanami-model:#{config.hanami_model_version} "
+      commands = build_run_params(File.read(filename).lines, config)
+      'RUN ' + commands
     end
 
     GEM_BUILDER_PREFIX = './gem-scripts/install-gems'
@@ -164,7 +175,7 @@ class DockerfileBuilder
   def initial_env
     InitialEnv.new.to_str
   end
-  
+
   def join_parts(separator = "\n")
     [from_image, initial_env, labels, commands].join(separator) + "\n"
   end

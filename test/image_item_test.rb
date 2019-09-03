@@ -1,29 +1,15 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
-require 'minitest/spec'
-require 'pry'
+require 'test_helper.rb'
 
-require 'minitest/reporters'
-Minitest::Reporters.use!
-
-# Set up MiniTest::Tagz, with stick-it-anywhere `:focus` support.
-require 'minitest/tagz'
-tags = ENV['TAGS'].split(',') if ENV['TAGS']
-tags ||= []
-tags << 'focus'
-Minitest::Tagz.choose_tags(*tags, run_all_if_no_match: true)
-
-require 'pry-byebug'
-
-require_relative './image_item'
+require_relative '../image_item'
 
 describe ImageItem do
   let(:default_hanami_model_version) { '1.3.2' }
   let(:default_hanami_version) { '1.3.1' }
   let(:default_image_version) { '9.99.0' }
   let(:default_maintainer) { 'Jeff Dickey <jdickey at seven-sigma dot com>' }
-  let(:default_ruby_version) { '2.6.5' }
+  let(:default_ruby_version) { '2.6.95' } # obviously fake but legal format
   let(:valid_params) do
     {
       base_os: 'slim-stretch',
@@ -175,16 +161,8 @@ describe ImageItem do
         expect(item.debian?).must_equal true
       end
 
-      it 'slim-jessie' do
-        valid_params[:base_os] = 'slim-jessie'
-      end
-
       it 'slim-stretch' do
         valid_params[:base_os] = 'slim-stretch'
-      end
-
-      it 'jessie' do
-        valid_params[:base_os] = 'jessie'
       end
 
       it 'stretch' do
@@ -209,16 +187,8 @@ describe ImageItem do
         expect(item.alpine?).must_equal false
       end
 
-      it 'slim-jessie' do
-        valid_params[:base_os] = 'slim-jessie'
-      end
-
       it 'slim-stretch' do
         valid_params[:base_os] = 'slim-stretch'
-      end
-
-      it 'jessie' do
-        valid_params[:base_os] = 'jessie'
       end
 
       it 'stretch' do

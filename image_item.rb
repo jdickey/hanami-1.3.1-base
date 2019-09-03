@@ -54,6 +54,6 @@ class ImageItem
   end
 
   BASE_REPO = 'jdickey/ruby'
-  DEBIAN_OS_NAMES = %w(slim-jessie slim-stretch jessie stretch).freeze
+  DEBIAN_OS_NAMES = %w(slim-stretch stretch).freeze
   DEFAULT_MAINTAINER = 'Jeff Dickey <jdickey at seven-sigma dot com>'
 end # class ImageItem
