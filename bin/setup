@@ -22,4 +22,10 @@ fi
 gem install yard
 rbenv rehash
 yard config --gem-install-yri
-gem install docker-api minitest minitest-reporters minitest-tagz pry-byebug
+gem install \
+    docker-api \
+    minitest \
+    minitest-reporters \
+    minitest-tagz \
+    pry-byebug \
+    simplecov
