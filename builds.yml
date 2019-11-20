@@ -1,140 +1,140 @@
 metadata:
-  image_version: 0.1.0
+  image_version: 0.2.0
   hanami_version: 1.3.1
   hanami_model_version: 1.3.2
   # other_gems:
   # - 'hanami-webconsole'
   # - dotenv
 builds:
-  2.6.4:
-    alpine3.9:
+  2.6.5:
+    alpine3.10:
       hm:
         tags:
-          - '2.6.4-alpine3.9'
-          - '2.6.4-alpine39-hm'
-          - '2.6.4-alpine39'
-          - '2.6.4-alpine-hm'
-          - '2.6.4-alpine'
-          - '2.6-alpine3.9-hm'
-          - '2.6-alpine3.9'
-          - '2.6-alpine39-hm'
-          - '2.6-alpine39'
+          - '2.6.5-alpine3.10'
+          - '2.6.5-alpine310-hm'
+          - '2.6.5-alpine310'
+          - '2.6.5-alpine-hm'
+          - '2.6.5-alpine'
+          - '2.6-alpine3.10-hm'
+          - '2.6-alpine3.10'
+          - '2.6-alpine310-hm'
+          - '2.6-alpine310'
           - '2.6-alpine-hm'
           - '2.6-alpine'
-          - '2-alpine3.9-hm'
-          - '2-alpine3.9'
-          - '2-alpine39-hm'
-          - '2-alpine39'
+          - '2-alpine3.10-hm'
+          - '2-alpine3.10'
+          - '2-alpine310-hm'
+          - '2-alpine310'
           - '2-alpine-hm'
           - '2-alpine'
-          - 'alpine3.9-hm'
-          - 'alpine3.9'
-          - 'alpine39-hm'
-          - 'alpine39'
+          - 'alpine3.10-hm'
+          - 'alpine3.10'
+          - 'alpine310-hm'
+          - 'alpine310'
           - 'alpine-hm'
           - 'alpine'
       no-hm:
         tags:
-          - '2.6.4-alpine3.9-no-hm'
-          - '2.6.4-alpine39-no-hm'
-          - '2.6.4-alpine-no-hm'
-          - '2.6-alpine3.9-no-hm'
-          - '2.6-alpine39-no-hm'
+          - '2.6.5-alpine3.10-no-hm'
+          - '2.6.5-alpine310-no-hm'
+          - '2.6.5-alpine-no-hm'
+          - '2.6-alpine3.10-no-hm'
+          - '2.6-alpine310-no-hm'
           - '2.6-alpine-no-hm'
-          - '2-alpine3.9-no-hm'
-          - '2-alpine39-no-hm'
+          - '2-alpine3.10-no-hm'
+          - '2-alpine310-no-hm'
           - '2-alpine-no-hm'
-          - 'alpine3.9-no-hm'
-          - 'alpine39-no-hm'
+          - 'alpine3.10-no-hm'
+          - 'alpine310-no-hm'
           - 'alpine-no-hm'
-    stretch:
+    buster:
       hm:
         actual_latest: true
         tags:
-          - '2.6.4-stretch-hm'
-          - '2.6.4-stretch'
-          - '2.6.4-hm'
-          - '2.6.4'
-          - '2.6-stretch-hm'
-          - '2.6-stretch'
+          - '2.6.5-buster-hm'
+          - '2.6.5-buster'
+          - '2.6.5-hm'
+          - '2.6.5'
+          - '2.6-buster-hm'
+          - '2.6-buster'
           - '2.6-hm'
           - '2.6'
-          - '2-stretch-hm'
-          - '2-stretch'
+          - '2-buster-hm'
+          - '2-buster'
           - '2-hm'
           - '2'
-          - 'stretch-hm'
-          - 'stretch'
+          - 'buster-hm'
+          - 'buster'
           - 'hm'
       no-hm:
         tags:
-          - '2.6.4-no-hm'
-          - '2.6-stretch-no-hm'
+          - '2.6.5-no-hm'
+          - '2.6-buster-no-hm'
           - '2.6-no-hm'
-          - '2-stretch-no-hm'
+          - '2-buster-no-hm'
           - '2-no-hm'
-          - 'stretch-no-hm'
+          - 'buster-no-hm'
           - 'no-hm'
-    slim-stretch:
+    slim-buster:
       hm:
         tags:
-          - '2.6.4-slim-stretch'
-          - '2.6-slim-stretch-hm'
-          - '2.6-slim-stretch'
-          - '2-slim-stretch-hm'
-          - '2-slim-stretch'
-          - 'slim-stretch-hm'
-          - 'slim-stretch'
+          - '2.6.5-slim-buster'
+          - '2.6-slim-buster-hm'
+          - '2.6-slim-buster'
+          - '2-slim-buster-hm'
+          - '2-slim-buster'
+          - 'slim-buster-hm'
+          - 'slim-buster'
       no-hm:
         tags:
-          - '2.6-slim-stretch-no-hm'
-          - '2-slim-stretch-no-hm'
-          - 'slim-stretch-no-hm'
-  2.5.6:
-    alpine3.9:
+          - '2.6-slim-buster-no-hm'
+          - '2-slim-buster-no-hm'
+          - 'slim-buster-no-hm'
+  2.5.7:
+    alpine3.10:
       hm:
         tags:
-          - '2.5.6-alpine3.9'
-          - '2.5.6-alpine39-hm'
-          - '2.5.6-alpine39'
-          - '2.5.6-alpine-hm'
-          - '2.5.6-alpine'
-          - '2.5-alpine3.9-hm'
-          - '2.5-alpine3.9'
-          - '2.5-alpine39-hm'
-          - '2.5-alpine39'
+          - '2.5.7-alpine3.10'
+          - '2.5.7-alpine310-hm'
+          - '2.5.7-alpine310'
+          - '2.5.7-alpine-hm'
+          - '2.5.7-alpine'
+          - '2.5-alpine3.10-hm'
+          - '2.5-alpine3.10'
+          - '2.5-alpine310-hm'
+          - '2.5-alpine310'
           - '2.5-alpine-hm'
           - '2.5-alpine'
       no-hm:
         tags:
-          - '2.5.6-alpine39-no-hm'
-          - '2.5.6-alpine-no-hm'
-          - '2.5-alpine3.9-no-hm'
-          - '2.5-alpine39-no-hm'
+          - '2.5.7-alpine310-no-hm'
+          - '2.5.7-alpine-no-hm'
+          - '2.5-alpine3.10-no-hm'
+          - '2.5-alpine310-no-hm'
           - '2.5-alpine-no-hm'
-    stretch:
+    buster:
       hm:
         tags:
-          - '2.5.6-stretch'
-          - '2.5-stretch-hm'
-          - '2.5-stretch'
+          - '2.5.7-buster'
+          - '2.5-buster-hm'
+          - '2.5-buster'
       no-hm:
         tags:
-          - '2.5-stretch-no-hm'
-    slim-stretch:
+          - '2.5-buster-no-hm'
+    slim-buster:
       hm:
         tags:
-          - '2.5.6-slim-stretch'
-          - '2.5-slim-stretch-hm'
-          - '2.5-slim-stretch'
+          - '2.5.7-slim-buster'
+          - '2.5-slim-buster-hm'
+          - '2.5-slim-buster'
       no-hm:
         tags:
-          - '2.5-slim-stretch-no-hm'
+          - '2.5-slim-buster-no-hm'
 
 # Handy if hacky build snippet; adjust as appropriate:
 #
-#   versions = ['2.6.4-', '2.6-', '2-', '']
-#   oses = ['stretch-', '']
+#   versions = ['2.6.5-', '2.6-', '2-', '']
+#   oses = ['buster-', '']
 #   hms = ['hm', '']
 #   hm_tags = versions.map do |version|
 #     oses.map do |os|
